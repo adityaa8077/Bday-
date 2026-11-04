@@ -6,32 +6,32 @@ import Image from 'next/image';
 
 const visionItems = [
   {
-    title: "Us, Together",
-    description: "Picture this: a warm evening, golden light, your head on my shoulder, and absolutely nowhere else we'd rather be. Just us. Just this. Just perfect.",
-    image: "/images/arpita-2.jpeg",
-    objectPos: "50% 10%",
-    quote: "\"I don't dream about places anymore. I dream about moments — and they all have you in them.\""
+    title: "The Dream: IIM Ahmedabad 🏛️",
+    description: "Walking into the prestigious Louis Kahn campus of IIM Ahmedabad, mastering management, and stepping into the world as an inspiring leader. Every mock test, every late night study session is carving your path to this glorious achievement.",
+    image: "/images/chetanya/iim.jpeg",
+    objectPos: "50% 50%",
+    quote: "\"May you reach IIM Ahmedabad, and may every bit of effort come back to you as a success that makes you smile.\""
   },
   {
-    title: "Your Happiness",
-    description: "I want to see you laughing so hard your stomach hurts. I want to see you chasing your wildest dreams with that fire in your eyes. I want to see you happy — truly, deeply, completely happy.",
-    image: "/images/arpita-4.jpeg",
-    objectPos: "50% 12%",
-    quote: "\"Your happiness is the only thing I'd spend my entire life working for.\""
+    title: "Good Health & Gentle Peace 🌸",
+    description: "My deepest daily prayer for you: full, vibrant health, inner calm, and a heart free of stress. You are so precious to me, and seeing you healthy, smiling, and peaceful is the greatest joy for your Bhaiya.",
+    image: "/images/chetanya/c1.jpeg",
+    objectPos: "50% 15%",
+    quote: "\"Please take care of your health. You are far more precious to me than you know, and I pray you are completely fine very soon.\""
   },
   {
-    title: "Our Adventures",
-    description: "Road trips with terrible singing, late-night conversations about everything and nothing, discovering beautiful places together. Every adventure is better with you.",
-    image: "/images/arpita-6.jpeg",
-    objectPos: "50% 10%",
-    quote: "\"The world is beautiful, but it's most beautiful when I'm seeing it with you.\""
+    title: "Family Chosen By Heart 🤍",
+    description: "Out of billions of paths in this universe, ours crossed. You are family my heart chose, and never let go of. Watching you grow into such a graceful, brilliant person fills my heart with gratitude.",
+    image: "/images/chetanya/c4.jpeg",
+    objectPos: "50% 15%",
+    quote: "\"If I had a hundred lifetimes, I would choose to be your brother in every single one of them.\""
   },
   {
-    title: "Growing Old Together",
-    description: "I don't just want today. I want every tomorrow. I want to be the person who still looks at you the same way I do now — with absolute wonder — even when we're old and grey.",
-    image: "/images/arpita-8.jpeg",
-    objectPos: "50% 12%",
-    quote: "\"My forever starts with you. It always has.\""
+    title: "A Brother's Lifelong Support 👑",
+    description: "Whatever heights you scale, whatever hurdles come your way, know that you never have to face anything alone. Your Bhaiya is always in your corner, cheering the loudest and supporting you always.",
+    image: "/images/chetanya/c5.jpeg",
+    objectPos: "50% 15%",
+    quote: "\"You will always be my small sis, and I will always be proud of you, today, tomorrow and forever.\""
   },
 ];
 
@@ -52,13 +52,13 @@ export default function VisionBook() {
           className="text-center mb-12 sm:mb-16"
         >
           <span className="font-playfair text-[10px] tracking-[0.3em] text-warmGold uppercase block mb-2">
-            Dreams I Have About Us
+            Dreams, Prayers & Brotherly Blessings
           </span>
           <h2 className="font-playfair text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 gold-gradient">
-            Visions of Our Tomorrow
+            Visions For Chetanya&apos;s Tomorrow
           </h2>
           <p className="font-cormorant text-lg sm:text-xl md:text-2xl text-softIvory/70 italic max-w-2xl mx-auto px-2">
-            &quot;Close your eyes, Arpita. Imagine all the beautiful things waiting for us.&quot;
+            &quot;May life open every door of success for you, small sis, and take you straight to your highest aspirations.&quot;
           </p>
           <div className="w-[80px] h-[1px] bg-gradient-to-r from-transparent via-warmGold to-transparent mx-auto mt-4 sm:mt-6"></div>
         </motion.div>

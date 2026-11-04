@@ -5,63 +5,63 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const letters = [
   {
-    trigger: "Miss Me",
-    title: "Open When You Miss Me",
+    trigger: "Need Motivation",
+    title: "Open When You Chase Your IIM Dream",
     content: [
-      "Hey Arpita. So you miss me? That honestly just made my entire day.",
-      "Close your eyes and think of the last time we laughed together. Feel it? I'm right there, in that warmth.",
-      "Distance doesn't change how I feel about you. Not even a little. You're always with me — in my thoughts, in my heartbeat, in every song I listen to.",
-      "I'll be there soon. And when I am, I'm never letting go. ♥️"
+      "Hey small sis. When the prep gets intense and late nights feel long, remember who you are.",
+      "You have a brilliant, sharp mind and an unstoppable dedication that is going to take you straight to IIM Ahmedabad. Every mock, every concept, and every ounce of effort is building your future.",
+      "Never doubt your potential. When exam anxiety whispers, remember that your Bhaiya has seen your grit and believes in you with all his heart.",
+      "Give it your all, stay consistent, and remember: IIM Ahmedabad is waiting for you! 🏛️✨"
     ]
   },
   {
-    trigger: "Can't Sleep",
-    title: "Open When You Can't Sleep",
+    trigger: "Health & Rest",
+    title: "Open When You Feel Unwell or Tired",
     content: [
-      "Hey, night owl. Can't sleep? Me neither, probably — I'm probably thinking about you right now too.",
-      "Put down the phone. Close your eyes. Imagine me right there beside you, telling you that everything is going to be okay.",
-      "You are safe. You are loved. And someone out there is falling asleep with your name in their heart.",
-      "Sweet dreams, Arpita. I hope I'm in them. 💕"
+      "Listen to me carefully, Chetanya. Please take care of your health before anything else.",
+      "No exam, no goal, and nothing in this world is more important than your health and peace of mind. If you are feeling tired or under the weather, put your books aside, drink warm water, take your medicines, and get deep rest.",
+      "You are far more precious to me than you know, and I pray every day that you stay completely fine, energetic, and healthy.",
+      "Take a deep breath and rest today. Your Bhaiya is looking out for you. 🌸🤍"
     ]
   },
   {
-    trigger: "Feel Sad",
-    title: "Open When You Feel Sad",
+    trigger: "Miss Your Bhaiya",
+    title: "Open When You Miss Your Bhaiya",
     content: [
-      "I know some days are heavy. Some moments feel like too much. And that's okay, Arpita.",
-      "But I need you to hear this: you are the strongest, bravest, most incredible person I know. And even on your worst day, you're still my favorite person.",
-      "Let yourself feel what you're feeling. Then let it go. Because better days are coming — I promise you that.",
-      "And whenever you need a safe place to land, my heart is right here. Always. ♥️"
+      "Hey small sis! Missing your Bhaiya? That honestly brings the warmest smile to my face.",
+      "Remember that no distance or busy days can ever change our bond. Out of billions of paths in this universe, ours crossed, and you became family my heart chose forever.",
+      "Whenever you need advice, someone to vent to, or just a brother to remind you that everything will be okay, I am always right here.",
+      "You will always be my little sister, and I am always here for you. ✨"
     ]
   },
   {
     trigger: "Need Confidence",
     title: "Open When You Need Confidence",
     content: [
-      "Listen to me, Arpita. You are INCREDIBLE. And I mean that with every fiber of my being.",
-      "You have this light inside you that doesn't dim for anyone. You walk into rooms and make them better just by being there.",
-      "Whatever you're about to do — that test, that conversation, that scary decision — you've got this. You've always had this.",
-      "Now go be the extraordinary person you are. I'm cheering you on with everything I've got. 🌟"
+      "Listen to me, Chetanya. You are INCREDIBLE, and you carry both intellect and grace so effortlessly.",
+      "In a world where people often second-guess themselves, remember the quiet strength you hold. You walk into challenges with determination and come out stronger every single time.",
+      "Whatever test, interview, or decision you're facing right now — you've got this. You've always had this.",
+      "Hold your head high. I am cheering for you from the front row! 🌟"
     ]
   },
   {
     trigger: "Need A Smile",
     title: "Open When You Need A Smile",
     content: [
-      "Fun fact: your smile is literally the 8th wonder of the world. Scientists are baffled. Countries are fighting over it.",
-      "Did that work? Are you smiling yet? Because if you are, then my entire purpose in life is fulfilled.",
-      "Here's another fact: I like you so much that I'd sit through a 3-hour movie I hate just to see you happy watching it.",
-      "There's that smile. See? My day just got 10000x better. ✨"
+      "Fun fact: having Aditya as your Bhaiya automatically makes you one of the coolest people on the planet. Science has confirmed it.",
+      "Did that make you smile? Because your smile lights up everything and reminds me that something beautiful is always present in this world.",
+      "Don't take life too seriously today. Eat something sweet, take a break, and laugh a little.",
+      "Keep that radiant smile intact, small sis! ✨"
     ]
   },
   {
-    trigger: "Feel Loved",
-    title: "Open When You Want To Feel Loved",
+    trigger: "Proud of You",
+    title: "Open When You Need To Hear 'I'm Proud Of You'",
     content: [
-      "Arpita, if you're reading this, I want you to know something important:",
-      "You are loved. Not because of what you do or how you look. You are loved for who you ARE — every flaw, every quirk, every beautiful imperfection.",
-      "I choose you. In every mood, every season, every version of yourself. You are the one my heart keeps choosing.",
-      "And that, my beautiful Arpita, will never, ever change. ♥️"
+      "Chetanya, I celebrate your small victories as if they were my own.",
+      "I see how hard you try, how genuinely you care for those around you, and how you never give up on your ambitions.",
+      "If I had a hundred lifetimes, I would choose to be your brother in every single one of them. You make me proud today, tomorrow, and forever.",
+      "Keep shining, small sis. Your Bhaiya will always stand beside you. 🌸"
     ]
   },
 ];
@@ -102,7 +102,7 @@ export default function OpenWhenLetters({ onConfessionOpen }: OpenWhenLettersPro
             transition={{ delay: 0.3, duration: 1.2 }}
             className="font-cormorant text-lg sm:text-xl md:text-2xl text-softIvory/70 italic max-w-2xl mx-auto px-2"
           >
-            &quot;Letters I wrote for you, Arpita — for every mood, every moment, every day you need to hear how loved you are.&quot;
+            &quot;Letters written by your Bhaiya Aditya for you, Chetanya — for every mood, every milestone, and every step towards your dreams.&quot;
           </motion.p>
           <div className="w-[80px] h-[1px] bg-gradient-to-r from-transparent via-warmGold to-transparent mx-auto mt-4 sm:mt-6"></div>
         </div>
@@ -142,7 +142,7 @@ export default function OpenWhenLetters({ onConfessionOpen }: OpenWhenLettersPro
           ))}
         </div>
 
-        {/* ═══════ THE 7TH ENVELOPE — CONFESSION TRIGGER ═══════ */}
+        {/* ═══════ THE 7TH ENVELOPE — BROTHERHOOD LETTER TRIGGER ═══════ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -155,34 +155,34 @@ export default function OpenWhenLetters({ onConfessionOpen }: OpenWhenLettersPro
             whileTap={{ scale: 0.98 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             onClick={onConfessionOpen}
-            className="group relative cursor-pointer w-full max-w-lg min-h-[190px] sm:aspect-[1.58] rounded-lg border-2 border-roseGold/50 bg-gradient-to-br from-[#201017] via-[#140a0f] to-[#0a0507] shadow-xl flex flex-col justify-between p-6 sm:p-8 overflow-hidden hover:border-roseGold hover:shadow-[0_15px_40px_rgba(183,110,121,0.35)]"
+            className="group relative cursor-pointer w-full max-w-lg min-h-[190px] sm:aspect-[1.58] rounded-lg border-2 border-warmGold/60 bg-gradient-to-br from-[#1d1410] via-[#140e0b] to-[#0a0705] shadow-xl flex flex-col justify-between p-6 sm:p-8 overflow-hidden hover:border-warmGold hover:shadow-[0_15px_40px_rgba(212,175,55,0.35)]"
           >
-            {/* Rose-gold pulsing glow */}
+            {/* Warm gold pulsing glow */}
             <motion.div
-              className="absolute inset-0 rounded bg-roseGold/10"
-              animate={{ opacity: [0.08, 0.2, 0.08] }}
+              className="absolute inset-0 rounded bg-warmGold/10"
+              animate={{ opacity: [0.08, 0.22, 0.08] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
             />
 
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-roseGold to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-warmGold to-transparent" />
 
-            <h3 className="font-playfair text-lg sm:text-2xl font-bold text-blushPink group-hover:text-white transition-colors duration-300 z-10 text-center leading-snug">
-              Open When You&apos;re Ready For My Confession ♥️
+            <h3 className="font-playfair text-lg sm:text-2xl font-bold text-warmGold group-hover:text-white transition-colors duration-300 z-10 text-center leading-snug">
+              Open For A Special Birthday Letter From Your Bhaiya 💌
             </h3>
 
             <div className="flex justify-center items-center py-3 sm:py-4 z-10">
               <motion.div
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-roseGold to-deepRose border-2 border-blushPink/60 flex items-center justify-center shadow-2xl relative"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-warmGold to-[#8c6b1b] border-2 border-warmGold/70 flex items-center justify-center shadow-2xl relative"
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <span className="text-white text-xl sm:text-2xl select-none">💌</span>
+                <span className="text-white text-xl sm:text-2xl select-none">🎂</span>
                 <div className="absolute inset-1 rounded-full border border-white/30 opacity-60"></div>
               </motion.div>
             </div>
 
-            <span className="font-cormorant text-sm sm:text-base italic text-blushPink/75 text-center tracking-widest block z-10 border-t border-roseGold/20 pt-2 group-hover:text-blushPink transition-colors duration-300">
-              &quot;Something I&apos;ve been wanting to tell you for so long…&quot;
+            <span className="font-cormorant text-sm sm:text-base italic text-warmGold/80 text-center tracking-widest block z-10 border-t border-warmGold/20 pt-2 group-hover:text-warmGold transition-colors duration-300">
+              &quot;Happy Birthday, my dearest Chetanya — from your Bhaiya Aditya ✨&quot;
             </span>
           </motion.div>
         </motion.div>
@@ -223,7 +223,7 @@ export default function OpenWhenLetters({ onConfessionOpen }: OpenWhenLettersPro
 
                 <div className="border-b border-[#E8DFD0] pb-3 sm:pb-4 mb-4 sm:mb-6 ml-4 sm:ml-6">
                   <span className="font-playfair text-[9px] sm:text-[10px] tracking-[0.25em] text-[#8C7A6B] uppercase block mb-1">
-                    From Aditya
+                    From Your Bhaiya Aditya
                   </span>
                   <h4 className="font-playfair text-lg sm:text-2xl font-bold text-[#3D2F26]">
                     {letters[activeLetter].title}
@@ -238,9 +238,9 @@ export default function OpenWhenLetters({ onConfessionOpen }: OpenWhenLettersPro
 
                 <div className="border-t border-[#E8DFD0] pt-4 sm:pt-6 mt-4 sm:mt-6 text-center ml-4 sm:ml-6">
                   <p className="font-cormorant text-sm sm:text-base text-[#8C7A6B] italic">
-                    Always yours, Arpita. Always.
+                    Always proud of you, Chetanya. Your Bhaiya is right here.
                   </p>
-                  <span className="text-lg sm:text-xl inline-block mt-2 select-none">♥️</span>
+                  <span className="text-lg sm:text-xl inline-block mt-2 select-none">✨</span>
                 </div>
               </motion.div>
             </motion.div>

@@ -28,16 +28,16 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "For My Arpita 💝 | Made With Love",
-  description: "A small corner of the internet, made just for Arpita — a love confession, memories, and celebrating the most beautiful soul.",
-  keywords: "Arpita, Love Confession, Romantic, Aditya, Memories, Kept in My Heart",
-  authors: [{ name: "Made with love by Aditya" }],
+  title: "For My Dearest Chetanya 🎂 | Happy 20th Birthday",
+  description: "A special corner of the universe celebrating Chetanya's 20th birthday — her warmth, pure heart, her IIM Ahmedabad dream, and the eternal bond of brotherhood from her Bhaiya Aditya.",
+  keywords: "Chetanya, 20th Birthday, IIM Ahmedabad, Brotherhood, Sister, Bhaiya, Aditya",
+  authors: [{ name: "Made with endless blessings by your Bhaiya, Aditya" }],
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: "For My Arpita 💝 | Made With Love",
-    description: "Every second with you is a memory I'll treasure forever.",
+    title: "For My Dearest Chetanya 🎂 | Happy 20th Birthday",
+    description: "May you reach IIM Ahmedabad, and may every bit of effort come back to you as success that makes you smile. Happy 20th Birthday, small sis! ✨",
     type: "website",
   },
 };

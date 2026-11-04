@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import NetflixNavbar from '@/components/NetflixNavbar';
 import HeroSection from '@/components/HeroSection';
 import BirthdayTimer from '@/components/BirthdayTimer';
@@ -32,59 +32,28 @@ import FinalScene from '@/components/FinalScene';
 export default function Home() {
   const [started, setStarted] = useState(false);
   const [confessionOpen, setConfessionOpen] = useState(false);
-  const [sectionTrack, setSectionTrack] = useState<'sitare' | 'khat' | 'sajde'>('sitare');
 
-  // Track scroll position to determine which song should play:
-  // 1. "Sitaare" plays till she reaches "Things About You That I Love"
-  // 2. "Khat" starts playing when she comes down to "Things About You That I Love"
-  // 3. "Sajde" starts playing when she comes down to "Through My Eyes"
-  useEffect(() => {
-    const handleScroll = () => {
-      const thingsElem = document.getElementById('things-never-change');
-      const memoryElem = document.getElementById('memory-garden');
-
-      if (!thingsElem || !memoryElem) return;
-
-      const triggerPoint = window.innerHeight * 0.45;
-      const thingsTop = thingsElem.getBoundingClientRect().top;
-      const memoryTop = memoryElem.getBoundingClientRect().top;
-
-      if (memoryTop <= triggerPoint) {
-        setSectionTrack('sajde');
-      } else if (thingsTop <= triggerPoint) {
-        setSectionTrack('khat');
-      } else {
-        setSectionTrack('sitare');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Compute active track:
-  // - In letter ("Open When You're Ready For Something I Never Said"): play "arz-kiya-hai" only
-  // - Otherwise: play track corresponding to the current section (sitare -> khat -> sajde)
-  const currentTrack: TrackName = confessionOpen ? 'arz-kiya-hai' : sectionTrack;
+  // Background music setup:
+  // - "Phoolon Ka Taaron Ka" plays everywhere across the entire experience
+  // - "Aankhon Mein Teri" plays specifically when the special birthday letter is opened
+  const currentTrack: TrackName = confessionOpen ? 'aankhon-mein-teri' : 'pholon-ka';
 
   return (
     <>
-      {/* Visual micro-details: dynamic custom cursor, scroll indicator bar, DevTools logs */}
+      {/* Visual micro-details: dynamic custom cursor, scroll indicator bar */}
       <ClientEffects />
 
       {/* Intro Overlay & Music Loader */}
       <WelcomeOverlay onEnter={() => setStarted(true)} />
       <BackgroundMusic playMusic={started} currentTrack={currentTrack} />
       <FallingPetals active={started} />
-      
+
       {/* Header bar */}
       <NetflixNavbar />
-      
+
       <main className="relative min-h-screen">
         <ParticleBackground />
-        
+
         {/* Story & Keepsake Sections */}
         <HeroSection />
         <BirthdayTimer />
@@ -103,10 +72,10 @@ export default function Home() {
         <WhenLifeFeelsHeavy />
         <BeforeYouLeave />
         <FinaleSection />
-        <FinalScene onInViewChange={() => {}} />
+        <FinalScene onInViewChange={() => { }} />
       </main>
 
-      {/* Heartbeat Confession Experience Overlay - plays "arz kiya hai" only */}
+      {/* Heartfelt Brotherhood Letter Overlay from Bhaiya Aditya */}
       <HeartbeatConfession
         isOpen={confessionOpen}
         onClose={() => setConfessionOpen(false)}

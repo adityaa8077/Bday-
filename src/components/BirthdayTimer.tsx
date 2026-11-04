@@ -27,13 +27,13 @@ interface ConfettiPiece {
 
 export default function BirthdayTimer() {
   const [timeData, setTimeData] = useState({
-    years: 19,
+    years: 20,
     months: 0,
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
-    totalDays: 6940,
+    totalDays: 7305,
   });
   const [mounted, setMounted] = useState(false);
   const [candleBlown, setCandleBlown] = useState(false);
@@ -46,27 +46,27 @@ export default function BirthdayTimer() {
 
     const updateTimer = () => {
       const now = new Date();
-      // Arpita's date of birth: 22 October 2007 (she is turning 19 on 22 October 2026)
-      const birthDate = new Date(2007, 9, 22, 0, 0, 0);
+      // Chetanya's date of birth: 04 November 2006 (turning 20 on 04 November 2026)
+      const birthDate = new Date(2006, 10, 4, 0, 0, 0);
       const diffMs = Math.max(0, now.getTime() - birthDate.getTime());
 
-      // Target 19th birthday moment
-      const nineteenthBirthday = new Date(2026, 9, 22, 0, 0, 0);
-      const diffTo19 = nineteenthBirthday.getTime() - now.getTime();
+      // Target 20th birthday moment: 04 November 2026
+      const twentiethBirthday = new Date(2026, 10, 4, 0, 0, 0);
+      const diffTo20 = twentiethBirthday.getTime() - now.getTime();
 
       let hours = 0;
       let minutes = 0;
       let seconds = 0;
       let days = 0;
 
-      if (diffTo19 > 0) {
-        // Countdown to the exact midnight of 22 October
-        days = Math.floor(diffTo19 / (1000 * 60 * 60 * 24));
-        hours = Math.floor((diffTo19 / (1000 * 60 * 60)) % 24);
-        minutes = Math.floor((diffTo19 / (1000 * 60)) % 60);
-        seconds = Math.floor((diffTo19 / 1000) % 60);
+      if (diffTo20 > 0) {
+        // Countdown to the exact midnight of 04 November
+        days = Math.floor(diffTo20 / (1000 * 60 * 60 * 24));
+        hours = Math.floor((diffTo20 / (1000 * 60 * 60)) % 24);
+        minutes = Math.floor((diffTo20 / (1000 * 60)) % 60);
+        seconds = Math.floor((diffTo20 / 1000) % 60);
       } else {
-        // Post-birthday live elapsed time
+        // Birthday live elapsed time
         hours = now.getHours();
         minutes = now.getMinutes();
         seconds = now.getSeconds();
@@ -76,13 +76,13 @@ export default function BirthdayTimer() {
       const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
       setTimeData({
-        years: 19, // Proudly celebrating 19 years!
+        years: 20, // Celebrating 20 glorious years!
         months: 0,
         days,
         hours,
         minutes,
         seconds,
-        totalDays: totalDays > 0 ? totalDays : 6940,
+        totalDays: totalDays > 0 ? totalDays : 7305,
       });
     };
 
@@ -143,10 +143,10 @@ export default function BirthdayTimer() {
   if (!mounted) return null;
 
   const timerUnits = [
-    { label: 'Years', value: 19, subtext: '19 years of pure radiance' },
-    { label: 'Hours', value: timeData.hours, subtext: 'hours to birthday magic' },
-    { label: 'Minutes', value: timeData.minutes, subtext: 'minutes of heartbeat' },
-    { label: 'Seconds', value: timeData.seconds, subtext: 'seconds of love' },
+    { label: 'Years', value: 20, subtext: '20 years of pure brilliance' },
+    { label: 'Hours', value: timeData.hours, subtext: 'hours of birthday magic' },
+    { label: 'Minutes', value: timeData.minutes, subtext: 'minutes of sisterly love' },
+    { label: 'Seconds', value: timeData.seconds, subtext: 'seconds of endless blessings' },
   ];
 
   return (
@@ -216,7 +216,7 @@ export default function BirthdayTimer() {
                 className="absolute"
               >
                 {c.shape === 'heart' ? (
-                  <span style={{ color: c.color, fontSize: `${14 * c.scale}px` }}>♥️</span>
+                  <span style={{ color: c.color, fontSize: `${14 * c.scale}px` }}>✨</span>
                 ) : c.shape === 'star' ? (
                   <span style={{ color: c.color, fontSize: `${14 * c.scale}px` }}>★</span>
                 ) : (
@@ -248,16 +248,16 @@ export default function BirthdayTimer() {
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-warmGold/40 bg-warmGold/10 backdrop-blur-md mb-4 shadow-[0_0_25px_rgba(212,175,55,0.25)]">
             <span className="text-sm">🎂</span>
             <span className="text-xs sm:text-sm font-inter tracking-[0.25em] text-warmGold uppercase font-bold">
-              19th Birthday ✦ Turning 19 on 22 October
+              20th Birthday ✦ Turning 20 on 04 November
             </span>
             <span className="text-sm">✨</span>
           </div>
 
           <h2 className="font-playfair text-3xl sm:text-5xl md:text-6xl font-bold mb-4 gold-gradient">
-            Celebrating 19 Years Of Arpita
+            Celebrating 20 Years Of Chetanya
           </h2>
           <p className="font-cormorant text-lg sm:text-2xl text-softIvory/80 italic max-w-2xl mx-auto px-4">
-            &quot;19 years of pure magic, unmatched kindness, and the radiant smile that makes the entire world brighter.&quot;
+            &quot;20 years of unmatched kindness, brilliant mind, and the golden dream to conquer IIM Ahmedabad.&quot;
           </p>
           <div className="w-[80px] h-[1px] bg-gradient-to-r from-transparent via-warmGold to-transparent mx-auto mt-6"></div>
         </motion.div>
@@ -299,12 +299,12 @@ export default function BirthdayTimer() {
         >
           <p className="font-cormorant text-base sm:text-xl md:text-2xl text-softIvory/90 italic flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
             <span>✨</span>
-            <span><strong className="gold-gradient font-playfair font-bold text-xl sm:text-3xl not-italic">19 Glorious Years</strong> of Arpita making this universe infinitely more beautiful ♥️</span>
+            <span><strong className="gold-gradient font-playfair font-bold text-xl sm:text-3xl not-italic">20 Glorious Years</strong> of Chetanya making our lives brighter & making her Bhaiya proud 🌸</span>
             <span>✨</span>
           </p>
         </motion.div>
 
-        {/* ═══════════ 3D BIRTHDAY CAKE & CANDLE ═══════════ */}
+        {/* ═══════════ 3D BIRTHDAY CAKE & CANDLE (SAME DESIGN) ═══════════ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -320,10 +320,10 @@ export default function BirthdayTimer() {
           </div>
 
           <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold gold-gradient mb-2">
-            Blow The Candle, Arpita! 🕯️✨
+            Blow The Candle, Chetanya! 🕯️✨
           </h3>
           <p className="font-cormorant text-base sm:text-lg text-softIvory/80 italic mb-8">
-            &quot;Close your eyes, make your deepest wish for your 19th year, and tap to blow out the candle!&quot;
+            &quot;Close your eyes, make your deepest wish for your 20th year and your IIM dream, and tap to blow out the candle!&quot;
           </p>
 
           {/* Interactive 3D Cake Container */}
@@ -384,7 +384,7 @@ export default function BirthdayTimer() {
                 ))}
               </div>
               <span className="absolute bottom-1 text-[11px] font-playfair font-bold text-rose-800/80">
-                19 ✨
+                20 ✨
               </span>
             </div>
 
@@ -402,7 +402,7 @@ export default function BirthdayTimer() {
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-xs sm:text-sm font-playfair font-extrabold tracking-widest text-[#881337] uppercase">
-                  Arpita ♡
+                  Chetanya ✦
                 </span>
               </div>
             </div>
@@ -431,13 +431,13 @@ export default function BirthdayTimer() {
             <div className="w-28 h-2.5 bg-gradient-to-r from-warmGold/70 via-amberHighlight to-warmGold/70 rounded-b-xl shadow-lg" />
           </motion.div>
 
-          {/* Blow / Card Trigger Button */}
+          {/* Blow / Card Trigger Button & Navigation Controls */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={handleBlowCandle}
               className={`px-8 py-4 rounded-full font-inter text-sm sm:text-base font-bold transition-all duration-300 shadow-2xl cursor-pointer ${
                 candleBlown
-                  ? 'bg-gradient-to-r from-roseGold/30 via-roseGold/20 to-roseGold/30 border border-roseGold/70 text-softIvory hover:scale-105'
+                  ? 'bg-gradient-to-r from-warmGold via-amberHighlight to-warmGold text-deepBlack hover:scale-105 shadow-[0_0_25px_rgba(212,175,55,0.5)]'
                   : 'bg-gradient-to-r from-warmGold via-amberHighlight to-warmGold text-deepBlack hover:scale-108 shadow-[0_0_30px_rgba(212,175,55,0.5)]'
               }`}
             >
@@ -445,23 +445,59 @@ export default function BirthdayTimer() {
             </button>
 
             {candleBlown && (
-              <button
-                onClick={() => setCandleBlown(false)}
-                className="px-5 py-3 rounded-full text-xs font-inter text-softIvory/70 hover:text-softIvory border border-white/15 hover:border-white/35 transition-colors cursor-pointer"
-              >
-                Relight Candle 🔄
-              </button>
+              <>
+                <button
+                  onClick={() => setCandleBlown(false)}
+                  className="px-5 py-3.5 rounded-full text-xs sm:text-sm font-inter font-semibold text-softIvory/90 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 hover:border-warmGold/60 transition-all cursor-pointer flex items-center gap-2 active:scale-95"
+                >
+                  <span>← Back (Relight Candle) 🔄</span>
+                </button>
+
+                <button
+                  onClick={() => {
+                    document.getElementById('cinematic-reels')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3.5 rounded-full text-xs sm:text-sm font-inter font-bold text-softIvory hover:text-warmGold bg-rose-950/40 hover:bg-rose-950/60 border border-warmGold/40 hover:border-warmGold transition-all cursor-pointer flex items-center gap-2 shadow-lg active:scale-95"
+                >
+                  <span>Down to Next Section ⬇️</span>
+                </button>
+              </>
             )}
           </div>
 
           {candleBlown && (
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-4 font-cormorant text-lg sm:text-xl text-roseGold font-semibold italic"
+              transition={{ duration: 0.6 }}
+              className="mt-6 flex flex-col items-center gap-4"
             >
-              ✨ Wish sealed in the stars! May your 19th year bring you boundless happiness, Arpita! ✨
-            </motion.p>
+              <p className="font-cormorant text-lg sm:text-2xl text-roseGold font-semibold italic max-w-xl mx-auto drop-shadow-sm">
+                ✨ Wish sealed in the stars! May your 20th year bring you IIM Ahmedabad, great health, and boundless joy, Chetanya! ✨
+              </p>
+
+              {/* ═══════ DEDICATED PROMINENT DOWN NAVIGATION ═══════ */}
+              <motion.button
+                onClick={() => {
+                  document.getElementById('cinematic-reels')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="group mt-2 relative inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full bg-gradient-to-r from-warmGold via-amberHighlight to-warmGold text-deepBlack font-inter font-bold text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_35px_rgba(212,175,55,0.6)] hover:shadow-[0_0_50px_rgba(212,175,55,0.9)] transition-all cursor-pointer"
+              >
+                <span>Continue Celebration • Next Chapter</span>
+                <motion.span
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+                  className="text-base"
+                >
+                  ⬇️
+                </motion.span>
+              </motion.button>
+              <span className="text-[11px] font-inter uppercase tracking-[0.2em] text-softIvory/40">
+                Click above or scroll down to explore memories ✦
+              </span>
+            </motion.div>
           )}
         </motion.div>
 
@@ -488,6 +524,14 @@ export default function BirthdayTimer() {
                   boxShadow: '0 0 50px rgba(212,175,55,0.3), 0 25px 70px rgba(0,0,0,0.85)',
                 }}
               >
+                {/* Back Button (Top Left) */}
+                <button
+                  onClick={() => setShowCardModal(false)}
+                  className="absolute top-4 left-4 z-30 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#d8c3ad] text-[#6d4c41] hover:text-[#2d221e] hover:border-[#881337] transition-all shadow-md text-xs font-inter font-bold cursor-pointer active:scale-95"
+                >
+                  <span>← Back to Timer</span>
+                </button>
+
                 {/* Close Button */}
                 <button
                   onClick={() => setShowCardModal(false)}
@@ -507,74 +551,89 @@ export default function BirthdayTimer() {
                 <div className="text-center mb-6 pt-2">
                   <div className="inline-block px-5 py-1.5 bg-[#ffe4e6] border border-[#f43f5e]/30 rounded-lg rotate-[-1deg] shadow-sm mb-2.5">
                     <span className="font-playfair text-xl sm:text-2xl font-black tracking-widest text-[#be123c] uppercase">
-                      HAPPY 19TH BIRTHDAY ♡
+                      HAPPY 20TH BIRTHDAY ✦
                     </span>
                   </div>
                   <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-[#881337] italic">
-                    Happy Birthday to my love 💕
+                    To My Dearest Sister, Chetanya 🌸
                   </h3>
                   <div className="flex items-center justify-center gap-2 text-rose-500 mt-1.5">
                     <span>🎂</span>
                     <span className="text-xs font-inter tracking-widest uppercase text-[#9f1239]/80 font-bold">
-                      Arpita ✦ 22 October ✦ 19 Years
+                      Chetanya ✦ 04 November ✦ 20 Years
                     </span>
-                    <span>🤍</span>
+                    <span>✨</span>
                   </div>
                 </div>
 
-                {/* Polaroid Photo Slots with Perfect Face Focus */}
-                <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 mb-6">
-                  {/* Photo 1 - Face Centered */}
-                  <div className="bg-white p-2 rounded-xl shadow-lg border border-[#e8d5c4] rotate-[-3deg] relative group hover:rotate-0 transition-transform duration-300">
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#fed7aa]/85 border-dashed border-y border-[#fb923c]/40 pointer-events-none" />
-                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-100">
+                {/* Polaroid Photo Slots with Chetanya's Photos — 100% Full & 3D */}
+                <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 mb-6" style={{ perspective: 800 }}>
+                  {/* Photo 1 - Chetanya */}
+                  <div className="bg-white p-2 rounded-xl shadow-xl border border-[#e8d5c4] rotate-[-3deg] relative group hover:rotate-0 hover:scale-105 transition-all duration-300">
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#fed7aa]/85 border-dashed border-y border-[#fb923c]/40 pointer-events-none z-20" />
+                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-900">
                       <Image
-                        src="/images/arpita-3.jpeg"
-                        alt="Arpita"
+                        src="/images/chetanya/c2.jpeg"
+                        alt=""
+                        fill
+                        className="object-cover filter blur-md opacity-40 scale-110 pointer-events-none"
+                      />
+                      <Image
+                        src="/images/chetanya/c2.jpeg"
+                        alt="Chetanya"
                         fill
                         sizes="160px"
-                        className="object-cover group-hover:scale-106 transition-transform duration-300"
-                        style={{ objectPosition: 'center 15%' }}
+                        className="object-contain group-hover:scale-105 transition-transform duration-300 z-10"
                       />
                     </div>
                     <p className="text-[10px] sm:text-xs font-caveat text-center text-[#78350f] mt-1.5 italic font-bold">
-                      you glow differently ♡
+                      you glow differently ✨
                     </p>
                   </div>
 
-                  {/* Photo 2 - Face Centered */}
-                  <div className="bg-white p-2 rounded-xl shadow-lg border border-[#e8d5c4] rotate-[2deg] relative group hover:rotate-0 transition-transform duration-300">
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#fbcfe8]/85 border-dashed border-y border-[#f472b6]/40 pointer-events-none" />
-                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-100">
+                  {/* Photo 2 - Chetanya */}
+                  <div className="bg-white p-2 rounded-xl shadow-xl border border-[#e8d5c4] rotate-[2deg] relative group hover:rotate-0 hover:scale-105 transition-all duration-300">
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#fbcfe8]/85 border-dashed border-y border-[#f472b6]/40 pointer-events-none z-20" />
+                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-900">
                       <Image
-                        src="/images/arpita-7.jpeg"
-                        alt="Arpita"
+                        src="/images/chetanya/starting-bg-full.jpeg"
+                        alt=""
+                        fill
+                        className="object-cover filter blur-md opacity-40 scale-110 pointer-events-none"
+                      />
+                      <Image
+                        src="/images/chetanya/starting-bg-full.jpeg"
+                        alt="Chetanya"
                         fill
                         sizes="160px"
-                        className="object-cover group-hover:scale-106 transition-transform duration-300"
-                        style={{ objectPosition: 'center 15%' }}
+                        className="object-contain group-hover:scale-105 transition-transform duration-300 z-10"
                       />
                     </div>
                     <p className="text-[10px] sm:text-xs font-caveat text-center text-[#78350f] mt-1.5 italic font-bold">
-                      so lucky to have you ♡
+                      proud brother always 🤍
                     </p>
                   </div>
 
-                  {/* Photo 3 - Face Centered */}
-                  <div className="bg-white p-2 rounded-xl shadow-lg border border-[#e8d5c4] rotate-[-2deg] relative group hover:rotate-0 transition-transform duration-300">
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#bbf7d0]/85 border-dashed border-y border-[#4ade80]/40 pointer-events-none" />
-                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-100">
+                  {/* Photo 3 - Chetanya */}
+                  <div className="bg-white p-2 rounded-xl shadow-xl border border-[#e8d5c4] rotate-[-2deg] relative group hover:rotate-0 hover:scale-105 transition-all duration-300">
+                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-10 h-4 bg-[#bbf7d0]/85 border-dashed border-y border-[#4ade80]/40 pointer-events-none z-20" />
+                    <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-neutral-900">
                       <Image
-                        src="/images/arpita-9.jpeg"
-                        alt="Arpita"
+                        src="/images/chetanya/iim.jpeg"
+                        alt=""
+                        fill
+                        className="object-cover filter blur-md opacity-40 scale-110 pointer-events-none"
+                      />
+                      <Image
+                        src="/images/chetanya/iim.jpeg"
+                        alt="IIM Ahmedabad"
                         fill
                         sizes="160px"
-                        className="object-cover group-hover:scale-106 transition-transform duration-300"
-                        style={{ objectPosition: 'center 15%' }}
+                        className="object-contain group-hover:scale-105 transition-transform duration-300 z-10"
                       />
                     </div>
                     <p className="text-[10px] sm:text-xs font-caveat text-center text-[#78350f] mt-1.5 italic font-bold">
-                      my favourite person ♡
+                      IIM Ahmedabad 🏛️
                     </p>
                   </div>
                 </div>
@@ -582,41 +641,64 @@ export default function BirthdayTimer() {
                 {/* Card Letter Text */}
                 <div className="space-y-4 font-cormorant text-base sm:text-lg text-[#3d2a21] leading-relaxed text-center px-2">
                   <p className="italic text-[#78350f] font-semibold text-lg sm:text-xl">
-                    &quot;You are one of the most special people in my life, and I feel so lucky to have you. Thank you for being my comfort, my happiness, and the reason behind so many beautiful smiles. ♡&quot;
+                    &quot;You may be my little sister by bond, but you are family my heart chose and will never let go of. Thank you for being such a pure, kind, and radiant soul in my life. ✨&quot;
                   </p>
 
                   <p>
-                    I hope this new 19th year of your life brings you endless love, peace, success, and everything your gentle heart wishes for. Stay happy, stay blessed, and keep shining just the way you do. ♡
+                    I hope this 20th milestone year brings you complete good health, limitless strength, and takes you right inside the gates of IIM Ahmedabad! May every late night study session and all your dedicated efforts blossom into glorious success.
                   </p>
 
                   <div className="py-1">
                     <span className="inline-block px-5 py-2 rounded-full bg-[#fce7f3] border border-[#f472b6]/40 text-[#831843] font-playfair font-bold text-sm sm:text-base italic shadow-xs">
-                      You will always be my favourite person ♡
+                      Always proud of my small sis — Your Bhaiya is right here ✨
                     </span>
                   </div>
 
                   <p className="font-playfair text-lg sm:text-xl text-[#9f1239] font-bold italic pt-1">
-                    Happy 19th Birthday once again! 💕🌸✨
+                    Happy 20th Birthday once again, dearest Chetanya! 🎂🌸✨
                   </p>
                 </div>
 
-                {/* Scrapbook Cute Badges & Notes */}
+                {/* Cute Badges & Notes */}
                 <div className="mt-6 pt-4 border-t border-dashed border-[#e2d5c3] flex flex-wrap items-center justify-center gap-2">
                   <span className="px-3 py-1 rounded-full bg-[#fef3c7] text-[#92400e] text-xs font-caveat font-bold shadow-xs">
-                    ✦ you glow differently when you&apos;re happy ♡
+                    ✦ Target: IIM Ahmedabad 🏛️
                   </span>
                   <span className="px-3 py-1 rounded-full bg-[#fce7f3] text-[#9d174d] text-xs font-caveat font-bold shadow-xs">
-                    ✦ Life is better with you in it ♡
+                    ✦ Please take care of your health 🤍
                   </span>
                   <span className="px-3 py-1 rounded-full bg-[#e0e7ff] text-[#3730a3] text-xs font-caveat font-bold shadow-xs">
-                    ✦ Grateful for you always ♡
+                    ✦ Proud of you always, small sis ✨
                   </span>
                   <span className="px-3 py-1 rounded-full bg-[#fee2e2] text-[#991b1b] text-xs font-caveat font-bold shadow-xs">
-                    ✦ Love you always ♡
+                    ✦ Your Bhaiya Aditya is right here 🌸
                   </span>
                   <span className="px-3 py-1 rounded-full bg-[#dcfce7] text-[#166534] text-xs font-caveat font-bold shadow-xs">
                     ✦ Keep shining always ✨
                   </span>
+                </div>
+
+                {/* Modal Navigation Actions */}
+                <div className="mt-6 pt-5 border-t border-[#eedec8] flex flex-wrap items-center justify-between gap-3">
+                  <button
+                    onClick={() => setShowCardModal(false)}
+                    className="px-5 py-2.5 rounded-full bg-white hover:bg-neutral-100 text-[#4a3528] border border-[#d8c3ad] font-inter font-semibold text-xs sm:text-sm transition-all cursor-pointer active:scale-95 shadow-sm"
+                  >
+                    ← Back to Cake &amp; Timer
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setShowCardModal(false);
+                      setTimeout(() => {
+                        document.getElementById('cinematic-reels')?.scrollIntoView({ behavior: 'smooth' });
+                      }, 250);
+                    }}
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-warmGold via-amberHighlight to-warmGold text-deepBlack font-inter font-bold text-xs sm:text-sm tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer active:scale-95"
+                  >
+                    <span>Continue Celebration (Next Chapter)</span>
+                    <span>⬇️</span>
+                  </button>
                 </div>
               </motion.div>
             </motion.div>

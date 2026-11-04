@@ -20,7 +20,7 @@ export default function VisionaryAction() {
           className="space-y-10"
         >
           <span className="font-playfair text-[10px] tracking-[0.3em] text-warmGold uppercase block">
-            Pure Grace
+            Pure Grace & Sibling Light
           </span>
 
           <h2 className="font-playfair text-4xl md:text-6xl font-bold gold-gradient">
@@ -29,20 +29,20 @@ export default function VisionaryAction() {
 
           <div className="glass rounded-lg p-10 md:p-14 border border-warmGold/20 max-w-3xl mx-auto">
             <p className="font-cormorant text-2xl md:text-3xl text-softIvory italic leading-relaxed mb-8">
-              &quot;She came into my world like a gentle breeze on a suffocating day,
+              &quot;Out of all the billions of paths in this universe, ours crossed,
               <br />
-              and made everything brighter just by existing.&quot;
+              and I will thank the universe for that for the rest of my life.&quot;
             </p>
 
             <div className="space-y-6 font-inter text-base md:text-lg text-softIvory/85 leading-relaxed text-left">
               <p>
-                Some people leave impressions through grand gestures, but with her, it is in the simplest, purest moments. The effortless way she makes everyone around her feel valued and safe. The softness in her voice, and the natural kindness she pours out so freely.
+                Some people leave impressions through grand gestures, but with Chetanya, it is in the simplest, purest moments. The effortless way she makes everyone around her feel valued and safe. The quiet discipline she brings to her studies, and the natural kindness she pours out so freely.
               </p>
               <p>
-                In a world where people so often build walls, she chooses to remain gentle, real, and compassionate. That unfiltered grace is what makes her truly unforgettable.
+                In a world where people so often build walls, she chooses to remain gentle, real, and compassionate. That unfiltered grace is what makes her an exceptional person, and the best little sister anyone could wish for.
               </p>
               <p className="text-warmGold font-semibold text-center text-xl sm:text-2xl font-playfair italic pt-2">
-                She didn&apos;t try to change my world. She just smiled. ✨
+                You are family my heart chose, and never let go of. ✨
               </p>
             </div>
           </div>

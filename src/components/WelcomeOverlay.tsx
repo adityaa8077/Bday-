@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface WelcomeOverlayProps {
   onEnter: () => void;
@@ -13,7 +14,7 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const visits = localStorage.getItem('dearher_visits');
+    const visits = localStorage.getItem('chetanya_bday_visits');
     const count = visits ? parseInt(visits, 10) : 0;
     setVisitCount(count);
   }, []);
@@ -37,31 +38,20 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
       x: number; y: number; radius: number; alpha: number; dx: number; dy: number;
     }> = [];
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 30; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 2 + 1,
-        alpha: Math.random() * 0.4 + 0.1,
-        dx: (Math.random() - 0.5) * 0.2,
-        dy: (Math.random() - 0.5) * 0.2,
+        radius: Math.random() * 2.5 + 1,
+        alpha: Math.random() * 0.45 + 0.1,
+        dx: (Math.random() - 0.5) * 0.25,
+        dy: (Math.random() - 0.5) * 0.25,
       });
     }
 
     let animationFrameId: number;
     const render = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#0a0a0a';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      const radialGrad = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 10,
-        canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) * 0.6
-      );
-      radialGrad.addColorStop(0, 'rgba(183, 110, 121, 0.06)');
-      radialGrad.addColorStop(1, 'rgba(10, 10, 10, 0)');
-      ctx.fillStyle = radialGrad;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((p) => {
         p.x += p.dx;
@@ -71,6 +61,8 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(212, 175, 55, ${p.alpha})`;
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = 'rgba(212, 175, 55, 0.8)';
         ctx.fill();
       });
 
@@ -85,7 +77,7 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
   }, [shouldShow]);
 
   const handleEnter = () => {
-    localStorage.setItem('dearher_visits', '1');
+    localStorage.setItem('chetanya_bday_visits', '1');
     setShouldShow(false);
     onEnter();
   };
@@ -98,18 +90,32 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-deepBlack/85 backdrop-blur-sm text-softIvory select-none px-4"
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-deepBlack/90 backdrop-blur-md text-softIvory select-none px-4 overflow-hidden"
           >
-            <canvas ref={canvasRef} className="absolute inset-0 z-0 w-full h-full pointer-events-none" />
+            {/* Full IIM Starting Background in Welcome Overlay */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+              <Image
+                src="/images/chetanya/iim.jpeg"
+                alt="IIM Ahmedabad"
+                fill
+                priority
+                className="object-cover opacity-25 filter blur-xs scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-deepBlack/80 via-deepBlack/70 to-deepBlack/95" />
+            </div>
+
+            <canvas ref={canvasRef} className="absolute inset-0 z-1 w-full h-full pointer-events-none" />
 
             <div className="relative z-10 text-center max-w-xl px-4 flex flex-col items-center justify-center w-full">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block px-4 py-1.5 rounded-full border border-warmGold/40 bg-warmGold/10 mb-3 text-xs sm:text-sm font-inter tracking-[0.25em] text-warmGold uppercase font-semibold"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-warmGold/40 bg-warmGold/10 backdrop-blur-md mb-4 text-xs sm:text-sm font-inter tracking-[0.25em] text-warmGold uppercase font-semibold shadow-[0_0_20px_rgba(212,175,55,0.25)]"
               >
-                🎂 A Special Birthday Celebration
+                <span>🏛️</span>
+                <span>IIM Ahmedabad Dream ✦ 20th Birthday</span>
+                <span>✨</span>
               </motion.div>
 
               <motion.h1
@@ -118,26 +124,28 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 className="font-playfair text-4xl sm:text-6xl lg:text-7xl font-bold mb-2 sm:mb-3 tracking-wider text-warmGold"
               >
-                Happy Birthday Arpita 🎂✨
+                Happy Birthday Chetanya 🎂✨
               </motion.h1>
+
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.9 }}
                 transition={{ delay: 0.1, duration: 0.5 }}
                 className="font-cormorant text-xl sm:text-2xl text-softIvory/90 italic mb-4 sm:mb-6 tracking-widest"
               >
-                Celebrating the Most Beautiful, Radiant Soul ✨
+                Celebrating 20 Years Of Pure Grace & An Unbreakable Bond ✨
               </motion.p>
 
               <motion.p
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 0.85, y: 0 }}
                 transition={{ delay: 0.15, duration: 0.6, ease: 'easeOut' }}
-                className="font-cormorant text-lg sm:text-2xl leading-relaxed italic text-softIvory/90 mb-8 sm:mb-12 max-w-md px-2"
+                className="font-cormorant text-lg sm:text-2xl leading-relaxed italic text-softIvory/90 mb-8 sm:mb-10 max-w-md px-2"
               >
-                &quot;May your special day be filled with endless laughter, gentle peace, and all the immense joy your beautiful heart brings into the world.&quot;
+                &quot;May you reach IIM Ahmedabad, and may every bit of effort come back to you as a victory that makes you smile. Happy 20th Birthday, small sis!&quot;
               </motion.p>
 
+              {/* Enter Button */}
               <motion.button
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -145,12 +153,13 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleEnter}
-                className="relative px-10 sm:px-14 py-3.5 sm:py-4 rounded border-2 border-warmGold text-warmGold font-inter tracking-[0.25em] uppercase text-xs sm:text-sm font-semibold overflow-hidden group cursor-pointer shadow-[0_0_25px_rgba(212,175,55,0.3)] bg-deepBlack/80"
+                className="relative px-10 sm:px-14 py-3.5 sm:py-4 rounded-full border-2 border-warmGold text-warmGold font-inter tracking-[0.25em] uppercase text-xs sm:text-sm font-bold overflow-hidden group cursor-pointer shadow-[0_0_35px_rgba(212,175,55,0.4)] bg-deepBlack/80"
               >
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-deepBlack">
-                  Enter Celebration ✨
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-deepBlack flex items-center gap-2">
+                  <span>Enter Celebration</span>
+                  <span>🌸</span>
                 </span>
-                <div className="absolute inset-0 bg-warmGold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom z-0"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-warmGold via-amberHighlight to-warmGold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom z-0"></div>
               </motion.button>
             </div>
           </motion.div>
@@ -166,7 +175,7 @@ export default function WelcomeOverlay({ onEnter }: WelcomeOverlayProps) {
             className="text-center"
           >
             <p className="font-cormorant text-xs sm:text-sm italic tracking-widest text-warmGold/80">
-              Welcome back, Arpita ✦
+              Welcome back, small sis Chetanya ✦
             </p>
           </motion.div>
         </div>

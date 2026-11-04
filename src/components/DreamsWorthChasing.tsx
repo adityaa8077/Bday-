@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 
 const treasures = [
+  { emoji: "🏛️", title: "The IIM Dream", description: "Target: IIM Ahmedabad. May every formula, case study, and late night effort bring you closer to this iconic milestone." },
   { emoji: "🌸", title: "Gentle Kindness", description: "The genuine warmth and consideration you extend to everyone. Your heart is one of the purest places in this world." },
-  { emoji: "✨", title: "That Miracle Smile", description: "The effortless beauty of your smile that brings light into any room and makes the hardest days feel instantly lighter." },
-  { emoji: "🌙", title: "A Calming Presence", description: "Being around you feels like taking a deep, peaceful breath. You have this magical gift of making everything feel right." },
-  { emoji: "🤍", title: "Quiet Grace", description: "The quiet dignity and natural elegance in the way you speak, laugh, and move through every moment of life." },
+  { emoji: "✨", title: "That Radiant Smile", description: "The effortless beauty of your smile that brings light into any room and makes even hard days feel instantly lighter." },
+  { emoji: "🤍", title: "Good Health & Peace", description: "A daily prayer for your well-being. Take care of yourself always — you are far more precious than you know." },
   { emoji: "💫", title: "Rare Authenticity", description: "In a world full of noise and pretending, you remain wonderfully, effortlessly, and genuinely yourself." },
-  { emoji: "🌷", title: "A Beautiful Destiny", description: "Whatever lies ahead for you, I pray life surrounds you with endless reasons to smile and all the joy you deserve." },
+  { emoji: "👑", title: "Brotherhood Bond", description: "If I had a hundred lifetimes, I would choose to be your brother in every single one of them. Your Bhaiya is always here." },
 ];
 
 export default function DreamsWorthChasing() {
@@ -26,10 +26,10 @@ export default function DreamsWorthChasing() {
           className="text-center mb-16"
         >
           <span className="font-playfair text-[10px] tracking-[0.3em] text-warmGold uppercase block mb-2">
-            What Makes You Special
+            What Makes Chetanya Special
           </span>
           <h2 className="font-playfair text-4xl md:text-6xl font-bold mb-6 gold-gradient">
-            Treasures of Your Heart
+            Treasures of Her Heart & Dreams
           </h2>
           <p className="font-cormorant text-xl md:text-2xl text-softIvory/70 italic max-w-2xl mx-auto">
             &quot;Some people bring happiness wherever they go, but you bring it even in quiet thoughts.&quot;
@@ -67,7 +67,7 @@ export default function DreamsWorthChasing() {
           className="text-center mt-16"
         >
           <p className="font-cormorant text-2xl md:text-3xl text-warmGold italic">
-            May every prayer whispered for your happiness come true, and may life always bless you with endless joy, peace, and light. ✨
+            May every prayer whispered for your happiness come true, may you reach IIM Ahmedabad, and may life always bless you with boundless joy. ✨
           </p>
         </motion.div>
 

@@ -19,7 +19,7 @@ export default function WhenLifeFeelsHeavy() {
           className="text-center mb-12"
         >
           <p className="font-cormorant text-2xl md:text-3xl text-warmGold italic">
-            &quot;If you&apos;ve come back here after a hard day, this part is for you.&quot;
+            &quot;If you&apos;ve come back here after an exhausting day, this part is for you, small sis.&quot;
           </p>
         </motion.div>
 
@@ -34,19 +34,19 @@ export default function WhenLifeFeelsHeavy() {
 
           <div className="space-y-6 font-inter text-base md:text-lg text-softIvory/90 leading-relaxed">
             <p className="font-cormorant text-xl md:text-2xl text-softIvory/70 italic mb-8">
-              Maybe today felt exhausting and the world felt a little too loud.
+              Maybe today felt exhausting and study prep felt a little too overwhelming.
               <br />
               Maybe you carried worries quietly in your heart without telling anyone.
               <br />
-              Maybe you quietly wondered if you are truly valued and seen.
+              Maybe you felt tired or under the weather.
             </p>
 
             <p className="font-playfair text-xl text-warmGold font-semibold italic border-l-2 border-warmGold/40 pl-4 py-1 text-left my-6">
-              Stop. Take a breath. Read this.
+              Stop. Take a deep breath. Read this.
             </p>
 
             <p>
-              I want you to know how deeply and sincerely you are appreciated. Every single day, your gentle presence brings warmth and light to those lucky enough to know you. You don&apos;t have to carry the weight of the world on your shoulders.
+              Please take care of your health, Chetanya. You are far more precious to me than you know, and I pray you are completely fine very soon. No score and no goal is worth sacrificing your peace of mind or well-being.
             </p>
 
             <p>
@@ -60,21 +60,17 @@ export default function WhenLifeFeelsHeavy() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-warmGold">✦</span>
-                <p>In <span className="text-warmGold font-medium">your honesty</span>.</p>
+                <p>In <span className="text-warmGold font-medium">your honest heart</span>.</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-warmGold">✦</span>
-                <p>In the way <span className="text-warmGold font-medium">you never give up</span>.</p>
+                <p>In the way <span className="text-warmGold font-medium">you never give up on your dreams</span>.</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-warmGold">✦</span>
-                <p>In <span className="text-warmGold font-medium">your heart</span>. Always your heart.</p>
+                <p>In <span className="text-warmGold font-medium">your soul</span>. Always your soul.</p>
               </div>
             </div>
-
-            <p>
-              Those things can&apos;t be scored. Can&apos;t be ranked. Can&apos;t be taken from you.
-            </p>
 
             <p>
               Whenever life feels too heavy — come back here. Read these words again.
@@ -82,15 +78,15 @@ export default function WhenLifeFeelsHeavy() {
 
             <div className="pt-8 text-center border-t border-warmGold/5 mt-8 space-y-2">
               <p className="font-playfair text-xl md:text-2xl gold-gradient font-bold">
-                Someone believes in you.
+                Your Bhaiya believes in you with all his heart.
               </p>
               <p className="font-playfair text-xl md:text-2xl gold-gradient font-bold">
-                Someone is proud of you.
+                Your Bhaiya is always proud of you.
               </p>
               <p className="font-cormorant text-lg md:text-xl text-softIvory/70 italic mt-4">
                 And that will never change — no matter what.
                 <br />
-                Always.
+                Wherever you are, whatever happens, your Bhaiya Aditya is right here. ✨
               </p>
             </div>
           </div>

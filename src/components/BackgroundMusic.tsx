@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export type TrackName = 'sitare' | 'khat' | 'arz-kiya-hai' | 'sajde';
+export type TrackName = 'pholon-ka' | 'aankhon-mein-teri' | 'arz-kiya-hai' | 'sitare' | 'khat' | 'sajde';
 
 interface BackgroundMusicProps {
   playMusic: boolean;
@@ -11,17 +11,21 @@ interface BackgroundMusicProps {
 }
 
 const trackLabels: Record<TrackName, string> = {
+  'pholon-ka': 'Phoolon Ka Taaron Ka 🌸',
+  'aankhon-mein-teri': 'Aankhon Mein Teri ✨',
+  'arz-kiya-hai': 'Arz Kiya Hai ✦',
   'sitare': 'Sitaare ✦',
   'khat': 'Khat ✦',
-  'arz-kiya-hai': 'Arz Kiya Hai ✦',
-  'sajde': 'I Think They Call This Love ✦',
+  'sajde': 'Sajde ✦',
 };
 
 const trackFiles: Record<TrackName, string> = {
+  'pholon-ka': '/audio/pholon-ka.mp3',
+  'aankhon-mein-teri': '/audio/aankhon-mein-teri.mp3',
+  'arz-kiya-hai': '/audio/arz-kiya-hai.mp3',
   'sitare': '/audio/sitare.mp3',
   'khat': '/audio/khat.mp3',
-  'arz-kiya-hai': '/audio/arz-kiya-hai.mp3',
-  'sajde': '/audio/I_Think_They_Call_This_Love_Cover.mp3',
+  'sajde': '/audio/sajde.mp3',
 };
 
 export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundMusicProps) {
@@ -54,10 +58,9 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
       return;
     }
 
-    // Always 100% full volume as requested
     audio.volume = 1.0;
 
-    const targetSrc = trackFiles[currentTrack];
+    const targetSrc = trackFiles[currentTrack] || trackFiles['pholon-ka'];
 
     // Check if we need to switch tracks
     if (currentTrackRef.current !== currentTrack) {
@@ -65,7 +68,7 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
       audio.src = targetSrc;
       audio.currentTime = 0;
       audio.load();
-      
+
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise
@@ -128,8 +131,9 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
     } else {
       setUserMuted(false);
       audio.volume = 1.0;
+      const targetSrc = trackFiles[currentTrack] || trackFiles['pholon-ka'];
       if (!audio.src || currentTrackRef.current !== currentTrack) {
-        audio.src = trackFiles[currentTrack];
+        audio.src = targetSrc;
         currentTrackRef.current = currentTrack;
       }
       audio.play()
@@ -144,15 +148,15 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
 
   return (
     <>
-      <audio 
-        ref={audioRef} 
-        loop 
-        preload="auto" 
-        src={trackFiles[currentTrack]}
+      <audio
+        ref={audioRef}
+        loop
+        preload="auto"
+        src={trackFiles[currentTrack] || trackFiles['pholon-ka']}
       />
 
       {/* Floating control button */}
-      <div 
+      <div
         className="fixed bottom-6 right-6 z-50 flex items-center justify-end"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
@@ -166,7 +170,7 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
               className="mr-3 glass px-3.5 py-1.5 rounded-full border border-warmGold/30 text-xs font-cormorant text-softIvory whitespace-nowrap tracking-wider pointer-events-none select-none shadow-lg bg-deepBlack/90 flex items-center gap-2"
             >
               <span className="text-warmGold">♪</span>
-              <span>{isPlaying ? `Playing: ${trackLabels[currentTrack]}` : 'Music paused'}</span>
+              <span>{isPlaying ? `Playing: ${trackLabels[currentTrack] || 'Phoolon Ka Taaron Ka 🌸'}` : 'Music paused'}</span>
             </motion.div>
           )}
         </AnimatePresence>
@@ -189,23 +193,23 @@ export default function BackgroundMusic({ playMusic, currentTrack }: BackgroundM
           <div className="relative w-5 h-5 flex items-center justify-center">
             {isPlaying ? (
               <div className="flex gap-[3px] items-end h-4 w-4 justify-center">
-                <span 
+                <span
                   className={`w-[2px] bg-warmGold rounded-full ${!reducedMotion ? 'animate-[pulse_1s_infinite_alternate]' : 'h-3'}`}
                   style={{ animationDelay: '0.1s' }}
                 />
-                <span 
+                <span
                   className={`w-[2px] bg-warmGold rounded-full ${!reducedMotion ? 'animate-[pulse_0.8s_infinite_alternate]' : 'h-4'}`}
                   style={{ animationDelay: '0.3s' }}
                 />
-                <span 
+                <span
                   className={`w-[2px] bg-warmGold rounded-full ${!reducedMotion ? 'animate-[pulse_1.2s_infinite_alternate]' : 'h-2'}`}
                   style={{ animationDelay: '0.5s' }}
                 />
               </div>
             ) : (
-              <svg 
+              <svg
                 className="w-5 h-5 fill-current"
-                viewBox="0 0 24 24" 
+                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6zm-2 16c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />

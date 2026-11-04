@@ -6,28 +6,28 @@ import Image from 'next/image';
 
 const destinations = [
   { 
-    name: "United Nations Delegate 🌐", 
-    tagline: "A Voice for Humanity on the World Stage", 
+    name: "IIM Ahmedabad Campus 🏛️", 
+    tagline: "The Crown Jewel of Management Education", 
     icon: "🏛️", 
-    description: "Stepping into the grand halls of the UN with unmatched poise, advocating for justice, equality, and peace across nations. A true diplomat whose words carry the weight of change and the warmth of empathy." 
+    description: "Walking through the iconic Louis Kahn red brick arches with quiet confidence, stepping into the highest echelons of leadership and intellectual excellence." 
   },
   { 
-    name: "Her Own NGO 🕊️", 
-    tagline: "Her Dream, Her Heart, Her Mission", 
-    icon: "🌱", 
-    description: "Founding a non-profit dedicated to uplifting lives, nurturing dreams, and protecting the vulnerable. Building a sanctuary of hope and kindness that will touch countless generations." 
+    name: "The Dedicated Grind & CAT Victory 📚", 
+    tagline: "Late Nights, Quiet Prep, Unmatched Focus", 
+    icon: "🎯", 
+    description: "Every formula mastered, every mock analyzed, and every late night study hour quietly building the foundation for an unforgettable percentile and victory." 
   },
   { 
-    name: "Healing & Making The World Happy 💛", 
-    tagline: "Spreading Sunshine Where It's Needed Most", 
+    name: "A Future Business Leader 👑", 
+    tagline: "Leading with Intellect, Vision & Empathy", 
     icon: "✨", 
-    description: "Bringing warmth into spaces that felt forgotten. Showing the world that gentleness is the greatest strength, and making millions of hearts feel safe, cherished, and genuinely happy." 
+    description: "Becoming the kind of visionary leader the world genuinely needs — combining sharp management acumen with the rare, genuine kindness of your heart." 
   },
   { 
-    name: "A Glorious Future Ahead 🚀", 
-    tagline: "Every Whisper of Your Heart Coming True", 
-    icon: "👑", 
-    description: "Watching you conquer every goal you ever dreamed of, walking your path with radiance and courage, while I stand right beside you — proud, in awe, and cheering you on forever." 
+    name: "Her Bhaiya's Endless Pride 🌟", 
+    tagline: "Cheering For Every Milestone Ahead", 
+    icon: "🌸", 
+    description: "Celebrating your grand convocation day at IIM Ahmedabad, knowing every sacrifice came back as a smile. Your Bhaiya standing right in the front row, bursting with pride." 
   },
 ];
 
@@ -49,13 +49,13 @@ export default function DestinationGoogle() {
           className="text-center mb-12 sm:mb-16"
         >
           <span className="font-playfair text-[10px] tracking-[0.3em] text-warmGold uppercase block mb-2">
-            Her Destiny & Calling
+            Target & Calling ✦ The Golden Dream
           </span>
           <h2 className="font-playfair text-3xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 gold-gradient">
-            Destined To Change The World 🌍✨
+            Destination: IIM Ahmedabad 🏛️✨
           </h2>
           <p className="font-cormorant text-lg sm:text-xl md:text-2xl text-softIvory/80 italic max-w-2xl mx-auto px-2">
-            &quot;The world doesn&apos;t just need leaders — it needs someone with your pure heart to make it happy.&quot;
+            &quot;May you reach IIM Ahmedabad, and may every late night effort come back to you as a glorious success.&quot;
           </p>
           <div className="w-[80px] h-[1px] bg-gradient-to-r from-transparent via-warmGold to-transparent mx-auto mt-4 sm:mt-6"></div>
         </motion.div>
@@ -85,37 +85,39 @@ export default function DestinationGoogle() {
           ))}
         </div>
 
-        {/* Romantic Portrait with face focus */}
+        {/* Featured IIM Photo with 3D Depth & Brotherhood Quote */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="relative w-full max-w-2xl mx-auto"
+          whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
+          style={{ perspective: 1200 }}
+          className="relative w-full max-w-3xl mx-auto cursor-pointer"
         >
-          <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] rounded-xl overflow-hidden shadow-2xl border border-warmGold/30 bg-[#0c090e]">
+          <div className="relative w-full h-[380px] sm:h-[480px] md:h-[540px] rounded-2xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(212,175,55,0.3)] border-2 border-warmGold/40 bg-[#0c090e]">
             {/* Ambient blur background */}
             <Image
-              src="/images/arpita-2.jpeg"
-              alt=""
+              src="/images/chetanya/iim.jpeg"
+              alt="IIM Ahmedabad"
               fill
               sizes="100px"
               className="object-cover filter blur-xl opacity-35 scale-110"
             />
             {/* Full photo completely visible */}
             <Image
-              src="/images/arpita-2.jpeg"
-              alt="Arpita - Destined For Greatness"
+              src="/images/chetanya/iim.jpeg"
+              alt="Chetanya's Dream - IIM Ahmedabad"
               fill
-              sizes="(max-width: 768px) 100vw, 650px"
+              sizes="(max-width: 768px) 100vw, 750px"
               className="object-contain z-10"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-deepBlack/90 via-deepBlack/20 to-transparent pointer-events-none z-20"></div>
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-center sm:text-left">
+            <div className="absolute inset-0 bg-gradient-to-t from-deepBlack/95 via-deepBlack/30 to-transparent pointer-events-none z-20"></div>
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-center sm:text-left z-30">
               <span className="text-xs uppercase tracking-widest text-warmGold font-semibold block mb-1">
-                A Promise From Aditya
+                A Birthday Prayer From Bhaiya Aditya 🏛️✨
               </span>
               <p className="font-cormorant text-lg sm:text-2xl text-softIvory italic font-medium leading-relaxed">
-                &quot;I see your future so clearly, Arpita. You&apos;re going to touch millions of lives, and I will be here loving, protecting, and believing in you every single day.&quot;
+                &quot;This birthday, my wish is simple. May you reach IIM Ahmedabad, and may every late night and every bit of effort come back to you as a success that makes you smile.&quot;
               </p>
             </div>
           </div>

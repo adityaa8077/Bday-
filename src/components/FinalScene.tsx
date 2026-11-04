@@ -17,16 +17,14 @@ export default function FinalScene({ onInViewChange }: FinalSceneProps) {
   const [stage, setStage] = useState(0);
   const [showSinglePetal, setShowSinglePetal] = useState(false);
 
-  // Notify parent of in-view state for volume dip
   useEffect(() => {
     if (inView) {
       onInViewChange(true);
       
-      // Step-by-step trigger for final texts
-      const t1 = setTimeout(() => setStage(1), 1000); // Stage 1
-      const t2 = setTimeout(() => setStage(2), 5000); // Stage 2 (4s pause)
-      const t3 = setTimeout(() => setStage(3), 11000); // Stage 3 (6s pause)
-      const t4 = setTimeout(() => setShowSinglePetal(true), 14000); // Drifting Petal
+      const t1 = setTimeout(() => setStage(1), 1000);
+      const t2 = setTimeout(() => setStage(2), 5000);
+      const t3 = setTimeout(() => setStage(3), 11000);
+      const t4 = setTimeout(() => setShowSinglePetal(true), 14000);
 
       return () => {
         clearTimeout(t1);
@@ -58,10 +56,10 @@ export default function FinalScene({ onInViewChange }: FinalSceneProps) {
               className="space-y-3"
             >
               <p className="font-cormorant text-2xl md:text-3xl text-softIvory/85 italic leading-relaxed">
-                &quot;The most beautiful love stories aren&apos;t written in books.
+                &quot;The most beautiful bonds in this universe aren&apos;t defined by blood alone.
               </p>
               <p className="font-cormorant text-2xl md:text-3xl text-softIvory/85 italic leading-relaxed">
-                They&apos;re written in the hearts of people brave enough to feel.&quot;
+                They are written in the hearts of people who choose and protect each other forever.&quot;
               </p>
             </motion.div>
           )}
@@ -77,18 +75,18 @@ export default function FinalScene({ onInViewChange }: FinalSceneProps) {
               className="space-y-6 pt-4"
             >
               <p className="font-cormorant text-xl md:text-2xl text-softIvory/70 italic max-w-xl mx-auto leading-relaxed">
-                No matter what happens from here, Arpita — whether this is the start of something or just a moment in time — I want you to always remember:
+                No matter where life takes you from here, Chetanya — as you chase your dreams and reach IIM Ahmedabad — I want you to always remember:
               </p>
               
               <div className="space-y-2 pt-4">
                 <p className="font-playfair text-2xl md:text-3xl font-bold gold-gradient">
-                  Someone chose you.
+                  Someone believes in you with all his heart.
                 </p>
                 <p className="font-playfair text-2xl md:text-3xl font-bold gold-gradient">
-                  Someone is completely, hopelessly yours.
+                  Someone is endlessly proud to be your brother.
                 </p>
                 <p className="font-playfair text-2xl md:text-3xl font-bold gold-gradient">
-                  And someone will always love you exactly as you are.
+                  And your Bhaiya Aditya is always right here for you.
                 </p>
               </div>
             </motion.div>
@@ -105,11 +103,11 @@ export default function FinalScene({ onInViewChange }: FinalSceneProps) {
               className="pt-10 space-y-8"
             >
               <p className="font-cormorant text-lg md:text-xl text-warmGold tracking-[0.15em] italic">
-                — Yours, in every heartbeat, Aditya ❤️
+                — Forever your Bhaiya, Aditya ✨
               </p>
               
               <p className="font-inter text-xs text-softIvory/35 pt-10 tracking-widest leading-relaxed">
-                Made with love, code, and a heart full of feelings for Arpita. ♥️
+                Made with love, code, and endless blessings for my dearest sister Chetanya. 🌸
                 <br />
                 © {new Date().getFullYear()} • Dedicated to You, Always ✨
               </p>
@@ -139,8 +137,8 @@ export default function FinalScene({ onInViewChange }: FinalSceneProps) {
           >
             <svg 
               viewBox="0 0 24 24" 
-              className="w-full h-full fill-current text-rose-300/60"
-              style={{ filter: 'drop-shadow(0 0 3px rgba(255, 192, 203, 0.4))' }}
+              className="w-full h-full fill-current text-amber-300/60"
+              style={{ filter: 'drop-shadow(0 0 3px rgba(212, 175, 55, 0.4))' }}
             >
               <path d="M12 2C8 6 6 10 6 14s3 6 6 6 6-2 6-6-2-8-6-12z" />
             </svg>

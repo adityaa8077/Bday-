@@ -42,25 +42,25 @@ export default function BeforeYouLeave() {
           <motion.p variants={paragraphVariants}>
             If today was a good day…
             <br />
-            <span className="text-warmGold font-medium not-italic text-3xl">I&apos;m happy for you.</span>
+            <span className="text-warmGold font-medium not-italic text-3xl">I&apos;m so happy for you, small sis.</span>
           </motion.p>
 
           <motion.p variants={paragraphVariants}>
             If today was rough…
             <br />
-            <span className="text-warmGold font-medium not-italic text-3xl">I&apos;m still proud of you.</span>
+            <span className="text-warmGold font-medium not-italic text-3xl">I&apos;m still endlessly proud of you.</span>
           </motion.p>
 
           <motion.p variants={paragraphVariants}>
             If you&apos;re smiling right now…
             <br />
-            <span className="text-warmGold font-medium not-italic text-3xl">I hope life gives you a million more reasons.</span>
+            <span className="text-warmGold font-medium not-italic text-3xl">May life give you a million more reasons.</span>
           </motion.p>
 
           <motion.p variants={paragraphVariants}>
-            If you&apos;re struggling…
+            If you&apos;re studying hard for IIM Ahmedabad…
             <br />
-            <span className="text-warmGold font-medium not-italic text-3xl">I hope tomorrow is a little kinder.</span>
+            <span className="text-warmGold font-medium not-italic text-3xl">Every late night will come back as victory.</span>
           </motion.p>
 
           <motion.div variants={paragraphVariants} className="space-y-3 pt-6">
@@ -68,12 +68,12 @@ export default function BeforeYouLeave() {
               Whatever happens next —
             </p>
             <p className="font-playfair text-lg sm:text-xl md:text-2xl not-italic text-warmGold/80 tracking-widest uppercase">
-              Endless Peace • Radiant Joy • Love that Never Leaves • A Path of Flowers ✨
+              Endless Peace • Vibrant Health • IIM Success • A Brother&apos;s Eternal Blessings ✨
             </p>
           </motion.div>
 
           <motion.p variants={paragraphVariants} className="pt-8 text-3xl md:text-4xl text-softIvory font-medium not-italic font-playfair border-t border-warmGold/10 max-w-xl mx-auto">
-            I hope you never forget this:
+            I hope you never forget this, Chetanya:
           </motion.p>
 
           <motion.div variants={paragraphVariants} className="space-y-6 pt-4">
@@ -89,7 +89,7 @@ export default function BeforeYouLeave() {
             <br />
             This little corner of the internet will be here.
             <br />
-            Waiting for you.
+            Waiting for you, small sis.
             <br />
             Just as it always has.
           </motion.p>

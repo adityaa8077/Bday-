@@ -6,22 +6,22 @@ import { useInView } from 'react-intersection-observer';
 export default function TheQuietGrind() {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
-  const romanticMoments = [
-    { 
-      title: "The Quiet Brilliance", 
-      description: "Carrying both intellect and grace so effortlessly. Whether working through challenging goals or bringing calm to those around you, your quiet dedication, sharp mind, and humble strength are truly inspiring." 
+  const sisterMoments = [
+    {
+      title: "The Quiet Brilliance",
+      description: "Carrying both intellect and grace so effortlessly. Whether working through rigorous prep or bringing calm to those around you, your quiet dedication, sharp mind, and humble strength are truly inspiring."
     },
-    { 
-      title: "The Generous Heart", 
-      description: "The way you make others feel seen, safe, and deeply appreciated. You pour kindness into little moments without ever asking for praise or recognition." 
+    {
+      title: "The Generous Heart",
+      description: "The way you make others feel seen, safe, and deeply appreciated. You pour kindness into little moments without ever asking for praise or recognition."
     },
-    { 
-      title: "The Unfiltered Smile", 
-      description: "Not the smile put on for others, but that real, spontaneous laughter that lights up your eyes. It is honestly one of my favorite miracles in this world." 
+    {
+      title: "The Unfiltered Smile",
+      description: "Not the smile put on for the world, but that real, spontaneous laughter that lights up your eyes. It is honestly one of my favorite miracles in this life."
     },
-    { 
-      title: "The Quiet Thoughts", 
-      description: "Even when I am just sitting alone in a quiet room, thoughts of you bring an effortless smile to my face. Knowing you exist is enough to brighten any day." 
+    {
+      title: "A Sister's Light",
+      description: "Out of all billions of paths in this universe, ours crossed. On my hardest days, when everything feels heavy, just thinking of you reminds me that something beautiful is still in my life."
     },
   ];
 
@@ -52,7 +52,7 @@ export default function TheQuietGrind() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {romanticMoments.map((moment, idx) => (
+          {sisterMoments.map((moment, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export default function TheQuietGrind() {
           className="text-center mt-16 max-w-2xl mx-auto"
         >
           <p className="font-cormorant text-2xl md:text-3xl text-softIvory/90 italic leading-relaxed">
-            You don&apos;t have to be anything more than you are. You are already my favorite miracle. ✨
+            If I had a hundred lifetimes, I would choose to be your brother in every single one of them. ✨
           </p>
         </motion.div>
 
